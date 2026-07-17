@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h4>Get In Touch</h4>
         <ul>
           <li><a href="mailto:deals@motiv8capital.com">deals@motiv8capital.com</a></li>
-          <li><a href="tel:+10000000000">(___) ___-____</a></li>
+          <li><a href="tel:+12143011981">(214) 301-1981</a></li>
           <li><a href="assets/motiv8-capital-one-pager.pdf">Download One-Pager (PDF)</a></li>
         </ul>
       </div>

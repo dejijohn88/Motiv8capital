@@ -8,18 +8,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Contact form: no backend wired up yet — show an inline confirmation
-  // and let the user know where the payload logs so it's easy to see
-  // it's ready to connect to a CRM / mail service later.
+  // Contact form: submits to Netlify Forms via AJAX so the page doesn't
+  // reload — Netlify detects the form at deploy time from the
+  // data-netlify + form-name markup in contact.html.
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var confirm = document.getElementById('form-confirm');
-      var data = Object.fromEntries(new FormData(form).entries());
-      console.log('Contact form submission (not yet connected to a backend):', data);
-      form.reset();
-      if (confirm) confirm.classList.add('show');
+      var confirmEl = document.getElementById('form-confirm');
+      var body = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      })
+        .then(function () {
+          form.reset();
+          if (confirmEl) confirmEl.classList.add('show');
+        })
+        .catch(function (err) {
+          console.error('Form submission failed:', err);
+          alert('Something went wrong sending your submission — please try again or email deals@motiv8capital.com directly.');
+        });
     });
   }
 });

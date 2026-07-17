@@ -47,7 +47,11 @@
     <div class="grid grid-2" style="gap:56px; align-items:flex-start;">
 
       <div class="form-card">
-        <form id="contact-form">
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="position:absolute; left:-9999px;" aria-hidden="true">
+            <label>Leave this field blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
           <div class="form-row">
             <div class="field">
               <label for="name">Full Name</label>
@@ -121,7 +125,7 @@
           </div>
           <div class="item">
             <div class="icon">☎</div>
-            <div><h4>Phone</h4><p>(___) ___-____</p></div>
+            <div><h4>Phone</h4><p><a href="tel:+12143011981">(214) 301-1981</a></p></div>
           </div>
           <div class="item">
             <div class="icon">◎</div>
