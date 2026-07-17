@@ -204,28 +204,13 @@ img { max-width: 100%; display: block; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: radial-gradient(ellipse at 20% -10%, #16305c 0%, var(--navy-900) 45%, var(--navy-950) 100%);
+  background:
+    linear-gradient(120deg, rgba(7,15,36,0.92) 0%, rgba(10,26,53,0.82) 45%, rgba(7,15,36,0.55) 100%),
+    url('img/hero-apartment.jpg');
+  background-size: cover;
+  background-position: center 68%;
   color: var(--cream-50);
   overflow: hidden;
-}
-.hero::after {
-  content: "";
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(184,135,74,0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(184,135,74,0.06) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(to bottom, black, transparent 85%);
-  pointer-events: none;
-}
-.hero-skyline {
-  position: absolute;
-  right: -6%;
-  bottom: 0;
-  width: 62%;
-  max-width: 780px;
-  opacity: 0.9;
-  pointer-events: none;
 }
 .hero-inner {
   position: relative;
@@ -625,7 +610,6 @@ img.team-photo { object-fit: cover; }
   .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .footer-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
   .buybox-grid { grid-template-columns: 1fr; gap: 8px; }
-  .hero-skyline { display: none; }
 }
 
 @media (max-width: 760px) {
