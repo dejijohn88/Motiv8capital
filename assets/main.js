@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(function (err) {
           console.error('Form submission failed:', err);
-          alert('Something went wrong sending your submission — please try again or email deals@motiv8capital.com directly.');
+          alert('Something went wrong sending your submission — please try again or email hello@motiv8capital.com directly.');
         });
     });
   }

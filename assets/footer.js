@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div>
         <h4>Get In Touch</h4>
         <ul>
-          <li><a href="mailto:deals@motiv8capital.com">deals@motiv8capital.com</a></li>
+          <li><a href="mailto:hello@motiv8capital.com">hello@motiv8capital.com</a></li>
           <li><a href="tel:+12143011981">(214) 301-1981</a></li>
+          <li>6060 N Central Expy, Dallas, TX 75206</li>
           <li><a href="assets/motiv8-capital-one-pager.pdf">Download One-Pager (PDF)</a></li>
         </ul>
       </div>
