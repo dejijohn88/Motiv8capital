@@ -51,7 +51,7 @@
   }
   .eyebrow::before { content:""; width:16px; height:1px; background:#b8874a; }
 
-  .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 0.3in; margin-bottom: 0.26in; }
+  .grid-2 { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0.3in; margin-bottom: 0.26in; }
   .col h2 { font-size: 0.98rem; margin-bottom: 8px; }
   .col p, .col li { font-size: 0.78rem; line-height:1.45; }
   ul.plain { margin:0; padding-left: 16px; }
@@ -59,7 +59,7 @@
 
   .criteria-box {
     border: 1px solid #b8874a; padding: 0.2in 0.26in; margin-bottom: 0.26in;
-    display:grid; grid-template-columns: repeat(4, 1fr); gap: 0.18in;
+    display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0.18in;
   }
   .criteria-box .k { font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#676f7c; margin-bottom:3px; }
   .criteria-box .v { font-size:0.82rem; font-weight:600; color:#0a1a35; }
