@@ -429,6 +429,7 @@ section { padding: 92px 0; }
   font-size: 2.4rem;
   letter-spacing: 0.02em;
 }
+img.team-photo { object-fit: cover; }
 .team-card h3 { margin-bottom: 2px; }
 .team-role { color: var(--bronze-500); font-size: 0.84rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 12px; display:block; }
 .team-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
